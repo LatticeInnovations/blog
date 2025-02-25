@@ -1,35 +1,44 @@
 ---
-description: Soura Bhattacharyya | Apr 10, 2023
+description: Soura Bhattacharyya | April 10, 2023
 ---
 
 # Finding the critical path
 
-## Motivation
+## Motivation and overview
 
-One of the key analytical measures of a project is its critical path, or CP—the longest path from start to finish. Tasks on the CP have to be closely monitored; delays in the CP will delay the entire project.
+One of the key analytical measures of a project is its critical path, or CP—the longest path from start to finish. Tasks on the CP have to be closely monitored; delays in the CP delay the entire project.
 
-In early 2023, we developed an in-house analytical tool that used dependency data to calculate critical path. At its heart lies the Bellman-Ford (BF) algorithm.&#x20;
+We have used several off-the-shelf project management tools, both with and without CP calculation. Those that did have it, did not perform to our satisfaction.&#x20;
 
-This post applies the BF algorithm to the task of calculating the critical path, and provides specific scenarios that are not adequately addressed by most off-the-shelf project management software.&#x20;
+Recently, we developed an in-house project management platform, [Feeta](https://www.thelattice.in/projects/feeta). One of its features is to calculate CP. It performed to our satisfaction—i.e. it handled some tricky (not realistic) scenarios with aplomb.&#x20;
 
-## Introduction
+At its heart lies the Bellman-Ford (BF) algorithm.
+
+This post presents our understanding of the BF algorithm. If you want a more thorough analytical grounding, please check out the [resources](finding-the-critical-path.md#resources-for-self-study) mentioned at the end this post. That is where we started.
+
+This post introduces basic terms used in graph theory, and works through an example step-by-step, so that the iterative nature of the BF algorithm can be more clearly understood. Finally, we provide pseudocode and python code from other internet resources.&#x20;
+
+## Setup
 
 We start with a project that has tasks with durations and dependencies (Fig 1). There are multiple paths from start `s` to finish `f`. The longest path is the critical path (CP), which governs the total project duration. Figure 1 shows that path `{s,k,h,i,m,n,f}`, totalling 15 days, is the CP.
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>Figure 1: task durations and connections</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Figure 1: task durations and connections</p></figcaption></figure>
 
 Graph theory can be applied to analyze such a diagram. In graph theory, each task is called a _**vertex**_. Each dependency is called an _**edge**_.
 
-Projects can be thought of _**weighted, directed, acyclic graphs**_, commonly abbreviated as weighted DAGs.  _**Weights**_ represent any numeric property of an edge; here, we use task duration. _**Directed**_ graphs are unidirectional—we move from predecessors to successors (from `s` to `a`), but not the other way. _**Acyclic**_ graphs do not have cycles, or loops.
+Projects can be thought of _**weighted, directed, acyclic graphs**_, commonly abbreviated as weighted DAGs.  _**Weights**_ represent any numeric property of an edge; here, we use task duration. _**Directed**_ graphs are unidirectional—we move only from predecessors to successors, from `s` to `a`; never the other way. And _**acyclic**_ graphs do not have cycles, or loops.
 
-To analyze projects, we assign weights equal to the task duration to each of the edges, so that path length converts to project duration. To find the CP, we need an algorithm that finds the longest path.\
+To analyze projects, we assign weights equal to the task duration to each of the edges, so that path length converts to project duration. To find the CP, we need an algorithm that finds the longest path.
 
+### Inverting weights
 
-## Assigning weights to edges
+The Bellman-Ford algorithm searches for the shortest path in a graph. But the critical path is the longest. Therefore, we invert the signs of all weights, so that a task of weight (duration) `2` days is represented as `-2`. Consequently, the path with the highest negative value is selected as the shortest: the critical path.
+
+### Assigning weights to edges
 
 Before we find the longest path, we have to assign weights to edges. If we assign the duration of task `v` to the edge `{v,w}` that connects to the successor `w`, figure 1 transforms into figure 2.
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>Figure 2: Vertices and weighted edges</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Figure 2: Vertices and weighted edges</p></figcaption></figure>
 
 Task `a` is 2 days long, and is followed by task `b`. Thus, we set edge length `C(a,b)` equal to the duration of task `a`. We could also calculate `C(a,b)` by the difference in start dates:
 
@@ -46,15 +55,15 @@ This formula accommodates cases where a task finishes on the same day as its suc
 
 ### Example
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption><p>Figure 3: A sample gantt with four sequential tasks</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Figure 3: A sample gantt with four sequential tasks</p></figcaption></figure>
 
 In the example above, only path is the critical path. It is 1 + 4 + 1 = 6 days long, including weekends/ holidays.
 
 Holidays have been intentionally included. Once we calculate the project duration—7 calendar days—we can compare it to the critical path length of 6 calendar days, and infer that the critical path has one day of slack. As we can see, there is a day of slack between the third and fourth tasks.
 
-## Bellman-Ford Algorithm
+### Bellman-Ford Algorithm
 
-### Notation
+#### Notation
 
 Before we move to the algorithm, let us formalize notation:
 
@@ -72,30 +81,32 @@ Before we move to the algorithm, let us formalize notation:
 
 `C(v,w)` = path length between two vertices connected by an edge, v and w
 
-### Inverting weights
-
-Bellman-Ford searches for the shortest path. However, we need to find the longest path — the critical path (CP). To “trick” the algorithm into finding the longest path, we invert the signs of all weights, so that a task of weight (duration) 2 days is represented as `-2`. As a result, the path with the highest negative value is selected as the shortest: the critical path.
-
-### Outer loop
+#### Outer loop
 
 We iterate through an outer loop a maximum of n-1 times, because an acyclic (no loops) path can, at most, pass through each vertex once. And a path passing through all n vertices has n-1 segments, or hops. In our example, n=14, hence there are a maximum of 13 outer loop iterations. However, because our graphs are sparse — most vertices have one or two inbound edges — we usually need fewer iterations.
 
-### Inner loop
+#### Inner loop
 
 Within each outer loop, we examine all available next steps, and “take the next step” wherever we find that it is a shorter path to a vertex. “Taking the next step” consists of 2 actions — updating the distance to the vertex, and adding the new vertex to the array that stores the path.
 
 Hence, we execute the following inner loop:
 
-| <p>for each edge (u, v) with weight w in edges do</p><p>    if distance[u] + w &#x3C; distance[v]    // is it faster to get to v via w?</p><p>    then</p><p>        distance[v] := distance[u] + w  // update distance[v]</p><p>        predecessor{s, … ,u} := {s, … u, v} // predecessor array updated</p><p>return distance, predecessor</p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+```
+for each edge (u, v) with weight w in edges do
+    if distance[u] + w < distance[v]    // is it faster to get to v via w?
+    then
+        distance[v] := distance[u] + w  // update distance[v]
+        predecessor{s, … ,u} := {s, … u, v} // predecessor array updated
+return distance, predecessor
+```
 
-### Base case, i=0
+#### Base case, i=0
 
 `i=0` means that there are zero segments, i.e. no hops—hence we can only get from s to s.&#x20;
 
-Therefore, `L(0,s) = 0`, representing a path of zero length from the vertex to itself.
+Therefore, `L(0,s) = 0`, representing a path of zero length from the starting vertex to itself.
 
-Also, we set `L(0,v) = ∞` for all other vertices, because we cannot reach any of them in zero hops. Instead of infinity, we can use a sufficiently large number, say 10,000, that is guaranteed to always be larger than any task’s duration (in days).
+Also, we set `L(0,v) = ∞` for all other vertices, because we cannot reach any of them in zero hops. Operationally, we can use a sufficiently large number instead of infinity, as long as it is guaranteed to always be larger than any task’s duration (in days).
 
 Thus, the distance array for the zeroth iteration is:
 
@@ -110,7 +121,6 @@ Previously computed vertices in red, vertices computed in this iteration in yell
 | <p>paths and their lengths:</p><p>sk: L(1,k) = 0</p><p>sa: L(1,a) = 0</p> |
 | ------------------------------------------------------------------------- |
 
-\
 \
 
 
@@ -138,9 +148,6 @@ Iteration 2
 | <p>paths and lengths:</p><p>skhi: -2</p><p>skgd: -1</p><p>sabc: -5</p><p>sabe: -5</p> |
 | ------------------------------------------------------------------------------------- |
 
-\
-\
-\
 \
 \
 \
@@ -206,21 +213,15 @@ Iteration 2
 \
 
 
-Thus, the algorithm finds 5 paths from start to finish. The “shortest” path has the highest negative value of -15. Updates to the distance array can be summarized as follows:&#x20;
+Thus, the algorithm finds 5 paths from start to finish. The “shortest” path has the highest negative value of -15.&#x20;
 
-| iter | s | a | b  | c  | d  | e  | k | g  | h  | i  | j  | m  | n   | f   |
-| ---- | - | - | -- | -- | -- | -- | - | -- | -- | -- | -- | -- | --- | --- |
-| 0    | 0 | ∞ | ∞  | ∞  | ∞  | ∞  | ∞ | ∞  | ∞  | ∞  | ∞  | ∞  | ∞   | ∞   |
-| 1    | 0 | 0 | ∞  | ∞  | ∞  | ∞  | 0 | ∞  | ∞  | ∞  | ∞  | ∞  | ∞   | ∞   |
-| 2    | 0 | 0 | -2 | ∞  | ∞  | ∞  | 0 | -1 | -1 | ∞  | ∞  | ∞  | ∞   | ∞   |
-| 3    | 0 | 0 | -2 | -5 | -2 | -5 | 0 | -1 | -1 | -2 | ∞  | ∞  | ∞   | ∞   |
-| 4    | 0 | 0 | -2 | -5 | -7 | -8 | 0 | -1 | -1 | -2 | -5 | -5 | ∞   | -7  |
-| 5    | 0 | 0 | -2 | -5 | -7 | -8 | 0 | -1 | -1 | -2 | -5 | -5 | -12 | -7  |
-| 6    | 0 | 0 | -2 | -5 | -7 | -8 | 0 | -1 | -1 | -2 | -5 | -5 | -12 | -15 |
+### Summary of iterations
+
+Here is the distance array through all the iterations.&#x20;
+
+<table data-header-hidden data-full-width="true"><thead><tr><th>iter</th><th width="65">s</th><th width="62">a</th><th width="65">b</th><th width="68">c</th><th width="67">d</th><th width="65">e</th><th width="100">k</th><th width="100">g</th><th width="100">h</th><th>i</th><th>j</th><th>m</th><th>n</th><th>f</th></tr></thead><tbody><tr><td>iter</td><td>s</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>k</td><td>g</td><td>h</td><td>i</td><td>j</td><td>m</td><td>n</td><td>f</td></tr><tr><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>1</td><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>2</td><td>0</td><td>0</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>-1</td><td>-1</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>3</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-2</td><td>-5</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>4</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>∞</td><td>-7</td></tr><tr><td>5</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-7</td></tr><tr><td>6</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-15</td></tr></tbody></table>
 
 \
-
-
 The algorithm terminates in iteration 6 because all paths have reached the finish point.
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdxXDvg9XWakJm2UEyoXhFvzYUr2BMSG189yXZnxbqu4Uv7t3oOtl5KJyONrMYw99y0QoXdmjN3RwaCQ--eFYBfgV2b-TBYVwF0QtL2CZeRJLjD1Gap9GlWdhagTaRCDLNokamdCzYwFW6K1rvkTvi0Xev_?key=cW25FWwjex3hGYwWCYZCZg" alt=""><figcaption></figcaption></figure>
