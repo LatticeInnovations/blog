@@ -204,27 +204,26 @@ Iteration 2
 
 #### Iteration 6
 
-\
+```
+paths and path lengths:
+skhimnf: -15
+skhijnf: -10 // distance(f) not updated
+skgdef: -5 // no change, reached finish
+sabcdef: -9
+sabef: -7 // no change, reached finish
+```
 
+Thus, the algorithm finds five paths from start to finish. The path with the least value, `skhimnf`, is longest path, or the critical path.&#x20;
 
-| <p>paths and path lengths:</p><p>skhimnf: -15</p><p>skhijnf: -10 // distance(f) not updated</p><p>skgdef: -5 // no change, reached finish</p><p>sabcdef: -9</p><p>sabef: -7 // no change, reached finish</p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-
-\
-
-
-Thus, the algorithm finds 5 paths from start to finish. The “shortest” path has the highest negative value of -15.&#x20;
-
-### Summary of iterations
+### Iterations summarized
 
 Here is the distance array through all the iterations.&#x20;
 
-<table data-header-hidden data-full-width="true"><thead><tr><th>iter</th><th width="65">s</th><th width="62">a</th><th width="65">b</th><th width="68">c</th><th width="67">d</th><th width="65">e</th><th width="100">k</th><th width="100">g</th><th width="100">h</th><th>i</th><th>j</th><th>m</th><th>n</th><th>f</th></tr></thead><tbody><tr><td>iter</td><td>s</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>k</td><td>g</td><td>h</td><td>i</td><td>j</td><td>m</td><td>n</td><td>f</td></tr><tr><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>1</td><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>2</td><td>0</td><td>0</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>-1</td><td>-1</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>3</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-2</td><td>-5</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>4</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>∞</td><td>-7</td></tr><tr><td>5</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-7</td></tr><tr><td>6</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-15</td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th>iter</th><th width="53">s</th><th width="54">a</th><th width="55">b</th><th width="54">c</th><th width="52">d</th><th width="51">e</th><th width="51">k</th><th width="52">g</th><th width="100">h</th><th width="60">i</th><th width="100">j</th><th width="100">m</th><th width="57">n</th><th width="100">f</th></tr></thead><tbody><tr><td>iter</td><td>s</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>k</td><td>g</td><td>h</td><td>i</td><td>j</td><td>m</td><td>n</td><td>f</td></tr><tr><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>1</td><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>2</td><td>0</td><td>0</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>-1</td><td>-1</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>3</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-2</td><td>-5</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>4</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>∞</td><td>-7</td></tr><tr><td>5</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-7</td></tr><tr><td>6</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-15</td></tr></tbody></table>
 
-\
 The algorithm terminates in iteration 6 because all paths have reached the finish point.
 
-<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdxXDvg9XWakJm2UEyoXhFvzYUr2BMSG189yXZnxbqu4Uv7t3oOtl5KJyONrMYw99y0QoXdmjN3RwaCQ--eFYBfgV2b-TBYVwF0QtL2CZeRJLjD1Gap9GlWdhagTaRCDLNokamdCzYwFW6K1rvkTvi0Xev_?key=cW25FWwjex3hGYwWCYZCZg" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdxXDvg9XWakJm2UEyoXhFvzYUr2BMSG189yXZnxbqu4Uv7t3oOtl5KJyONrMYw99y0QoXdmjN3RwaCQ--eFYBfgV2b-TBYVwF0QtL2CZeRJLjD1Gap9GlWdhagTaRCDLNokamdCzYwFW6K1rvkTvi0Xev_?key=cW25FWwjex3hGYwWCYZCZg" alt=""><figcaption><p>BF algorithm computes all paths and path lengths</p></figcaption></figure>
 
 At the end of iteration 6, we also have all paths available as a set of arrays.
 
@@ -232,29 +231,59 @@ At the end of iteration 6, we also have all paths available as a set of arrays.
 
 Source: [Wikipedia](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
 
-| <p>function BellmanFord(list vertices, list edges, vertex source) is</p><p><br></p><p>    // This implementation takes in a graph, represented as</p><p>    // lists of vertices (represented as integers [0..n-1]) and edges,</p><p>    // and fills two arrays, distance and predecessor, holding</p><p>    // the shortest path from the source to each vertex</p><p><br></p><p>    distance := list of size n</p><p>    predecessor := list of size n</p><p><br></p><p>    // Step 1: initialize graph</p><p>    for each vertex v in vertices do</p><p>        distance[v] := inf     // Initialize distance to all vertices to ∞</p><p>        predecessor[v] := null // And having a null predecessor</p><p>    </p><p>    distance[source] := 0      // Distance from the source to itself is zero</p><p><br></p><p>    // Step 2: updated distance and predecessors repeatedly</p><p>    repeat V−1 times:          // V = number of vertices (tasks)</p><p>         for each edge (u, v) with weight w in edges do</p><p>             if distance[u] + w &#x3C; distance[v] </p><p>             then</p><p>                 distance[v] := distance[u] + w  // distance list updated</p><p>                 predecessor[v] := u    // predecessor list updated</p><p>    return distance, predecessor</p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+function BellmanFord(list vertices, list edges, vertex source) is
 
+    // This implementation takes in a graph, represented as
+    // lists of vertices (represented as integers [0..n-1]) and edges,
+    // and fills two arrays, distance and predecessor, holding
+    // the shortest path from the source to each vertex
 
+    distance := list of size n
+    predecessor := list of size n
+
+    // Step 1: initialize graph
+    for each vertex v in vertices do
+        distance[v] := inf     // Initialize distance to all vertices to ∞
+        predecessor[v] := null // And having a null predecessor
+    
+    distance[source] := 0      // Distance from the source to itself is zero
+
+    // Step 2: updated distance and predecessors repeatedly
+    repeat V−1 times:          // V = number of vertices (tasks)
+         for each edge (u, v) with weight w in edges do
+             if distance[u] + w < distance[v] 
+             then
+                 distance[v] := distance[u] + w  // distance list updated
+                 predecessor[v] := u    // predecessor list updated
+    return distance, predecessor
+```
 
 ### Python implementation&#x20;
 
-Source: [Programiz.com](https://www.programiz.com/dsa/bellman-ford-algorithm). Limitation: this implementation does not print the path
+A python implementation is available in [Programiz.com](https://www.programiz.com/dsa/bellman-ford-algorithm); it does not print the path. You can [try out this code on Replit](https://replit.com/@SouraBhattacha2/BellmanFordAlgo#main.py), with the following inputs:
 
-| <p>class Graph:</p><p>    def __init__(self, vertices):</p><p>        self.V = vertices   # Total number of vertices in the graph</p><p>        self.graph = []     # Array of edges</p><p><br></p><p>    # Add edges</p><p>    def add_edge(self, s, d, w):</p><p>        self.graph.append([s, d, w])</p><p><br></p><p>    # Print the solution</p><p>    def print_solution(self, dist):</p><p>        print("Vertex Distance from Source")</p><p>        for i in range(self.V):</p><p>            print("{0}\t\t{1}".format(i, dist[i]))</p><p><br></p><p>    def bellman_ford(self, src):</p><p><br></p><p>        # Step 1: fill the distance array and predecessor array</p><p>        dist = [float("Inf")] * self.V</p><p>        # Mark the source vertex</p><p>        dist[src] = 0</p><p><br></p><p>        # Step 2: relax edges |V| - 1 times</p><p>        for _ in range(self.V - 1):</p><p>            for s, d, w in self.graph:</p><p>                if dist[s] != float("Inf") and dist[s] + w &#x3C; dist[d]:</p><p>                    dist[d] = dist[s] + w</p><p><br></p><p>        # Print the distance and predecessor array</p><p>        self.print_solution(dist)</p> |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+g = Graph(5)
+g.add_edge(0, 1, 5)
+g.add_edge(0, 2, 4)
+g.add_edge(1, 3, 3)
+g.add_edge(2, 1, 6)
+g.add_edge(3, 2, 2)
 
-\
-This code can be [tried out directly](https://replit.com/@SouraBhattacha2/BellmanFordAlgo#main.py) on a browser-based IDE, with the following inputs:
+g.bellman_ford(0)
+```
 
-| <p>g = Graph(5)</p><p>g.add_edge(0, 1, 5)</p><p>g.add_edge(0, 2, 4)</p><p>g.add_edge(1, 3, 3)</p><p>g.add_edge(2, 1, 6)</p><p>g.add_edge(3, 2, 2)</p><p><br></p><p>g.bellman_ford(0)</p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
-\
 The output is:
 
-| <p>Vertex Distance from Source</p><p>0       0</p><p>1       5</p><p>2       4</p><p>3       8</p><p>4       inf</p> |
-| -------------------------------------------------------------------------------------------------------------------- |
+```
+Vertex Distance from Source
+0       0
+1       5
+2       4
+3       8
+4       inf
+```
 
 ## Resources for self-study
 
