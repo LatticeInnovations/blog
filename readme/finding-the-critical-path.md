@@ -6,11 +6,11 @@ description: Soura Bhattacharyya | April 10, 2023
 
 ## Motivation and overview
 
-One of the key analytical measures of a project is its critical path, or CP—the longest path from start to finish. Tasks on the CP have to be closely monitored; delays in the CP delay the entire project.
+One of the key analytical measures of a project is its critical path, or CP—the longest path from start to finish. Tasks on the CP have to be closely monitored; delays in the CP delay the entire project. The CP itself has to be monitored—complex projects have dynamic CPs.&#x20;
 
-We have used several off-the-shelf project management tools, both with and without CP calculation. Those that did have it, did not perform to our satisfaction.&#x20;
+We have used several off-the-shelf project management tools, both with and without CP calculation. Those that did have it, did not perform to our satisfaction. We were left wondering—what's under the hood?&#x20;
 
-Recently, we developed an in-house project management platform, [Feeta](https://www.thelattice.in/projects/feeta). One of its features is to calculate CP. It performed to our satisfaction—i.e. it handled some tricky (not realistic) scenarios with aplomb.&#x20;
+Recently, we developed an in-house project management platform, [Feeta](https://www.thelattice.in/projects/feeta). One of its features is to calculate CP. It performed to our satisfaction, and handled tricky real-world scenarios with aplomb.
 
 At its heart lies the Bellman-Ford (BF) algorithm.
 
@@ -20,11 +20,11 @@ This post introduces basic terms used in graph theory, and works through an exam
 
 ## Setup
 
-We start with a project that has tasks with durations and dependencies (Fig 1). There are multiple paths from start `s` to finish `f`. The longest path is the critical path (CP), which governs the total project duration. Figure 1 shows that path `{s,k,h,i,m,n,f}`, totalling 15 days, is the CP.
+We start with a project that has tasks with durations and dependencies. There are multiple paths from start `s` to finish `f`. The longest path, or the critical path, is `{s,k,h,i,m,n,f}`, totalling 15 days.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Figure 1: task durations and connections</p></figcaption></figure>
 
-Graph theory can be applied to analyze such a diagram. In graph theory, each task is called a _**vertex**_. Each dependency is called an _**edge**_.
+Graph theory can be applied to analyze such a diagram—each task is treated as a _**vertex**_, and each dependency is an _**edge**_.
 
 Projects can be thought of _**weighted, directed, acyclic graphs**_, commonly abbreviated as weighted DAGs.  _**Weights**_ represent any numeric property of an edge; here, we use task duration. _**Directed**_ graphs are unidirectional—we move only from predecessors to successors, from `s` to `a`; never the other way. And _**acyclic**_ graphs do not have cycles, or loops.
 
