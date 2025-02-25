@@ -77,7 +77,9 @@ Before we move to the algorithm, let us formalize notation:
 
 `e` = any edge&#x20;
 
-`L(i,v)` = minimum length of a path from s to v, where i represents the number of hops. `i ∈ {0, 1, 2, … n-1}`, because the longest possible path is one that touches all the vertices once.
+`L(i,v)` = minimum length of a path from s to v, where i represents the number of hops.
+
+`i ∈ {0, 1, 2, … n-1}`, because the longest possible path is one that touches all the vertices once.
 
 `C(v,w)` = path length between two vertices connected by an edge, v and w
 
@@ -121,10 +123,15 @@ Previously computed vertices in red, vertices computed in this iteration in yell
 | <p>paths and their lengths:</p><p>sk: L(1,k) = 0</p><p>sa: L(1,a) = 0</p> |
 | ------------------------------------------------------------------------- |
 
-\
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
+Distance array:
 
-distance array:
+```
+iter | s | a | b | c | d | e | k | g | h | i | j | m | n | f
+----- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+1    | 0 | 0 | ∞ | ∞ | ∞ | ∞ | 0 | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞
+```
 
 | iter | s | a | b | c | d | e | k | g | h | i | j | m | n | f |
 | ---- | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
@@ -163,15 +170,15 @@ Iteration 2
 
 #### Iteration 4
 
-\
+```
+paths and lengths:
+skhim: -5
+skhij: -5
+skgde: -3
+sabcd: -7
+sabef: -7
+```
 
-
-| <p>paths and lengths:</p><p>skhim: -5</p><p>skhij: -5</p><p>skgde: -3</p><p>sabcd: -7</p><p>sabef: -7</p> |
-| --------------------------------------------------------------------------------------------------------- |
-
-\
-\
-\
 \
 \
 
@@ -184,9 +191,6 @@ Iteration 2
 
 
 #### Iteration 5
-
-\
-
 
 | <p>paths and lengths:</p><p>skhimn: -12</p><p>skhijn: -12</p><p>skgdef: -5</p><p>sabcde: -8</p><p>sabef: -7 // no change, reached finish in prior iteration </p> |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
