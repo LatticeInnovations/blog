@@ -1,5 +1,21 @@
 ---
 description: Soura Bhattacharyya | Feb 18, 2025
+cover: .gitbook/assets/warren-4l-e7U6c5ek-unsplash.jpg
+coverY: -292
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Offline-first peer-to-peer payment

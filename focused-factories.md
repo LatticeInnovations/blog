@@ -1,5 +1,21 @@
 ---
 description: Soura Bhattacharyya | Feb 18, 2015
+cover: .gitbook/assets/ansgar-scheffold-A-wumu2cs0o-unsplash.jpg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Focused factories
