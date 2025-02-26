@@ -6,9 +6,9 @@ description: Soura Bhattacharyya | April 10, 2023
 
 ## Motivation and overview
 
-One of the key analytical measures of a project is its critical path, or CP—the longest path from start to finish. Tasks on the CP have to be closely monitored; delays in the CP delay the entire project. The CP itself has to be monitored—complex projects have dynamic CPs.&#x20;
+One of the key analytical measures of a project is its critical path, or CP—the longest path from start to finish. Tasks on the CP have to be closely monitored; delays in the CP delay the entire project. The CP itself has to be monitored—complex projects have dynamic CPs.
 
-We have used several off-the-shelf project management tools, both with and without CP calculation. Those that did have it, did not perform to our satisfaction. We were left wondering—what's under the hood?&#x20;
+We have used several off-the-shelf project management tools, both with and without CP calculation. Those that did have it, did not perform to our satisfaction. We were left wondering—what's under the hood?
 
 Recently, we developed an in-house project management platform, [Feeta](https://www.thelattice.in/projects/feeta). One of its features is to calculate CP. It performed to our satisfaction, and handled tricky real-world scenarios with aplomb.
 
@@ -16,7 +16,7 @@ At its heart lies the Bellman-Ford (BF) algorithm.
 
 This post presents our understanding of the BF algorithm. If you want a more thorough analytical grounding, please check out the [resources](finding-the-critical-path.md#resources-for-self-study) mentioned at the end this post. That is where we started.
 
-This post introduces basic terms used in graph theory, and works through an example step-by-step, so that the iterative nature of the BF algorithm can be more clearly understood. Finally, we provide pseudocode and python code from other internet resources.&#x20;
+This post introduces basic terms used in graph theory, and works through an example step-by-step, so that the iterative nature of the BF algorithm can be more clearly understood. Finally, we provide pseudocode and python code from other internet resources.
 
 ## Setup
 
@@ -26,7 +26,7 @@ We start with a project that has tasks with durations and dependencies. There ar
 
 Graph theory can be applied to analyze such a diagram—each task is treated as a _**vertex**_, and each dependency is an _**edge**_.
 
-Projects can be thought of _**weighted, directed, acyclic graphs**_, commonly abbreviated as weighted DAGs.  _**Weights**_ represent any numeric property of an edge; here, we use task duration. _**Directed**_ graphs are unidirectional—we move only from predecessors to successors, from `s` to `a`; never the other way. And _**acyclic**_ graphs do not have cycles, or loops.
+Projects can be thought of _**weighted, directed, acyclic graphs**_, commonly abbreviated as weighted DAGs. _**Weights**_ represent any numeric property of an edge; here, we use task duration. _**Directed**_ graphs are unidirectional—we move only from predecessors to successors, from `s` to `a`; never the other way. And _**acyclic**_ graphs do not have cycles, or loops.
 
 To analyze projects, we assign weights equal to the task duration to each of the edges, so that path length converts to project duration. To find the CP, we need an algorithm that finds the longest path.
 
@@ -48,7 +48,7 @@ While convenient, the start-date-difference method is flawed, because it include
 
 However, startDiff is a useful parameter to optimize our calculations. Concretely,
 
-1. If b is a task, then  `C(a,b) = min (startDiff(a,b), Duration(a))`&#x20;
+1. If b is a task, then `C(a,b) = min (startDiff(a,b), Duration(a))`
 2. If b is a milestone, then `C(a,b) = Duration(a)`
 
 This formula accommodates cases where a task finishes on the same day as its successor. In such cases, the duration is one day, but `startDiff` is zero. It also accommodates milestones that are achieved as soon as a task ends, including the project end milestone.
@@ -75,7 +75,7 @@ Before we move to the algorithm, let us formalize notation:
 
 `v` = any vertex
 
-`e` = any edge&#x20;
+`e` = any edge
 
 `L(i,v)` = minimum length of a path from s to v, where i represents the number of hops.
 
@@ -83,13 +83,19 @@ Before we move to the algorithm, let us formalize notation:
 
 `C(v,w)` = path length between two vertices connected by an edge, v and w
 
+### Loops
+
+Bellman-ford is an iterative algorithm, which examines all available next steps as it "walks" through the entire graph. It consists of two loops.
+
 #### Outer loop
 
-We iterate through an outer loop a maximum of n-1 times, because an acyclic (no loops) path can, at most, pass through each vertex once. And a path passing through all n vertices has n-1 segments, or hops. In our example, n=14, hence there are a maximum of 13 outer loop iterations. However, because our graphs are sparse — most vertices have one or two inbound edges — we usually need fewer iterations.
+We iterate through an outer loop a maximum of n-1 times, because an acyclic path can, at most, pass through each vertex once (if it passed through the same vertex twice, it would become cyclic, i.e. it would have a loop).&#x20;
+
+A path passing through all `n` vertices has `n-1` segments, or hops. In our example, `n=14`, hence there are a maximum of 13 outer loop iterations. However, because our graphs are sparse—most vertices have one or two inbound edges—we will need fewer that 13 iterations.
 
 #### Inner loop
 
-Within each outer loop, we examine all available next steps, and “take the next step” wherever we find that it is a shorter path to a vertex. “Taking the next step” consists of 2 actions — updating the distance to the vertex, and adding the new vertex to the array that stores the path.
+Within each outer loop, we examine all available next steps, and “take the next step” wherever we find that it is a shorter path to a vertex. “Taking the next step” consists of 2 actions—updating the distance to the vertex, and adding the new vertex to the array that stores the path.
 
 Hence, we execute the following inner loop:
 
@@ -102,15 +108,18 @@ for each edge (u, v) with weight w in edges do
 return distance, predecessor
 ```
 
+### Working example
+
 #### Base case, i=0
 
-`i=0` means that there are zero segments, i.e. no hops—hence we can only get from s to s.&#x20;
+`i=0` means that there are zero segments, i.e. no hops—hence we can only get from s to s.
 
 Therefore, `L(0,s) = 0`, representing a path of zero length from the starting vertex to itself.
 
 Also, we set `L(0,v) = ∞` for all other vertices, because we cannot reach any of them in zero hops. Operationally, we can use a sufficiently large number instead of infinity, as long as it is guaranteed to always be larger than any task’s duration (in days).
 
 Thus, the distance array for the zeroth iteration is:
+
 ```
 | iter | s | a | b | c | d | e | k | g | h | i | j | m | n | f |
 | ---- | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
@@ -118,8 +127,9 @@ Thus, the distance array for the zeroth iteration is:
 ```
 
 #### Iteration 1, i=1
-Previously computed vertices in red, vertices computed in this iteration in yellow, and unchanged vertices in blue.
-Paths and path lengths:
+
+Previously computed vertices in red, vertices computed in this iteration in yellow, and unchanged vertices in blue. Paths and path lengths:
+
 ```
 sk: L(1,k) = 0
 sa: L(1,a) = 0
@@ -136,7 +146,9 @@ Distance array:
 ```
 
 #### Iteration 2
+
 Paths and path lengths:
+
 ```
 skh: L(2,h) = -1
 skg: L(2,g) = -1
@@ -150,7 +162,9 @@ sab: L(2,b) = -2
 ```
 
 #### Iteration 3
+
 Paths and path lengths:
+
 ```
 skhi: -2
 skgd: -1
@@ -165,6 +179,7 @@ sabe: -5
 ```
 
 #### Iteration 4
+
 Paths and path lengths:
 
 ```
@@ -182,7 +197,9 @@ sabef: -7
 ```
 
 #### Iteration 5
+
 Paths and path lengths:
+
 ```
 skhimn: -12
 skhijn: -12
@@ -198,7 +215,9 @@ sabef: -7: no change, reached finish in prior iteration
 ```
 
 #### Iteration 6
+
 Paths and path lengths:
+
 ```
 skhimnf: -15
 skhijnf: -10: distance(f) not updated
@@ -207,13 +226,13 @@ sabcdef: -9
 sabef: -7: no change, reached finish
 ```
 
-Thus, the algorithm finds five paths from start to finish. The path with the greatest negative value, `skhimnf`, is the longest path, or the critical path.&#x20;
+Thus, the algorithm finds five paths from start to finish. The path with the greatest negative value, `skhimnf`, is the longest path, or the critical path.
 
 ### Iterations summarized
 
-Here is the distance array through all the iterations.&#x20;
+Here is the distance array through all the iterations.
 
-<table data-header-hidden data-full-width="true"><thead><tr><th>iter</th><th width="48">s</th><th width="48">a</th><th width="48">b</th><th width="48">c</th><th width="48">d</th><th width="48">e</th><th width="48">k</th><th width="48">g</th><th width="48">h</th><th width="48">i</th><th width="48">j</th><th width="48">m</th><th width="48">n</th><th width="48">f</th></tr></thead><tbody><tr><td>iter</td><td>s</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>k</td><td>g</td><td>h</td><td>i</td><td>j</td><td>m</td><td>n</td><td>f</td></tr><tr><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>1</td><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>2</td><td>0</td><td>0</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>-1</td><td>-1</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>3</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-2</td><td>-5</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>4</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>∞</td><td>-7</td></tr><tr><td>5</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-7</td></tr><tr><td>6</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-15</td></tr></tbody></table>
+<table data-header-hidden data-full-width="true"><thead><tr><th width="86">iter</th><th width="60">s</th><th width="58">a</th><th width="57">b</th><th width="56">c</th><th width="58">d</th><th width="56">e</th><th width="56">k</th><th width="55">g</th><th width="56">h</th><th width="59">i</th><th width="59">j</th><th width="66">m</th><th width="62">n</th><th width="60">f</th></tr></thead><tbody><tr><td>iter</td><td>s</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>k</td><td>g</td><td>h</td><td>i</td><td>j</td><td>m</td><td>n</td><td>f</td></tr><tr><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>1</td><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>2</td><td>0</td><td>0</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>-1</td><td>-1</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>3</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-2</td><td>-5</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>4</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>∞</td><td>-7</td></tr><tr><td>5</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-7</td></tr><tr><td>6</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-15</td></tr></tbody></table>
 
 The algorithm terminates in iteration 6 because all paths have reached the finish point.
 
@@ -254,6 +273,7 @@ function BellmanFord(list vertices, list edges, vertex source) is
 ```
 
 ### Python implementation
+
 A python implementation is available in [Programiz.com](https://www.programiz.com/dsa/bellman-ford-algorithm); it does not print the path. You can [try out this code on Replit](https://replit.com/@SouraBhattacha2/BellmanFordAlgo#main.py), with the following inputs:
 
 ```
@@ -277,6 +297,8 @@ Vertex Distance from Source
 3       8
 4       inf
 ```
+
+I use a free Replit account, so no guarantees that the workspace will always be available.
 
 ## Resources for self-study
 

@@ -1,9 +1,7 @@
-# Blog
+# Home
 
-The Lattice blog. A mix of business ideas and technical concepts. And sometimes, things that are hiding in plain sight.
+Welcome to the Lattice Innovations blog. A mix of business ideas and technical concepts. And sometimes, things that are hiding in plain sight.
 
-
-
-
+To go back to our main website, [click here](https://thelattice.in).
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Focused factories: disrupting traditional healthcare delivery</td><td><a href=".gitbook/assets/ansgar-scheffold-A-wumu2cs0o-unsplash.jpg">ansgar-scheffold-A-wumu2cs0o-unsplash.jpg</a></td><td><a href="focused-factories.md">focused-factories.md</a></td></tr><tr><td>Offline-first peer-to-peer payment: part I</td><td><a href=".gitbook/assets/warren-4l-e7U6c5ek-unsplash.jpg">warren-4l-e7U6c5ek-unsplash.jpg</a></td><td><a href="offline-first-peer-to-peer-payment.md">offline-first-peer-to-peer-payment.md</a></td></tr></tbody></table>
