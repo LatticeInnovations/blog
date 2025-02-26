@@ -111,67 +111,63 @@ Therefore, `L(0,s) = 0`, representing a path of zero length from the starting ve
 Also, we set `L(0,v) = ∞` for all other vertices, because we cannot reach any of them in zero hops. Operationally, we can use a sufficiently large number instead of infinity, as long as it is guaranteed to always be larger than any task’s duration (in days).
 
 Thus, the distance array for the zeroth iteration is:
-
+```
 | iter | s | a | b | c | d | e | k | g | h | i | j | m | n | f |
 | ---- | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
 | 0    | 0 | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ |
+```
 
-\## Iteration 1, i=1
-
+#### Iteration 1, i=1
 Previously computed vertices in red, vertices computed in this iteration in yellow, and unchanged vertices in blue.
-
-| <p>paths and their lengths:</p><p>sk: L(1,k) = 0</p><p>sa: L(1,a) = 0</p> |
-| ------------------------------------------------------------------------- |
+Paths and path lengths:
+```
+sk: L(1,k) = 0
+sa: L(1,a) = 0
+```
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Distance array:
 
 ```
-iter | s | a | b | c | d | e | k | g | h | i | j | m | n | f
------ --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
-1    | 0 | 0 | ∞ | ∞ | ∞ | ∞ | 0 | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞
-```
-
 | iter | s | a | b | c | d | e | k | g | h | i | j | m | n | f |
 | ---- | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
 | 1    | 0 | 0 | ∞ | ∞ | ∞ | ∞ | 0 | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ | ∞ |
+```
 
-\
-Iteration 2
+#### Iteration 2
+Paths and path lengths:
+```
+skh: L(2,h) = -1
+skg: L(2,g) = -1
+sab: L(2,b) = -2
+```
 
-| <p>paths and path lengths:</p><p>skh: L(2,h) = -1</p><p>skg: L(2,g) = -1</p><p>sab: L(2,b) = -2</p> |
-| --------------------------------------------------------------------------------------------------- |
-
-\
-
-
+```
 | iter | s | a | b  | c | d | e | k | g  | h  | i | j | m | n | f |
 | ---- | - | - | -- | - | - | - | - | -- | -- | - | - | - | - | - |
 | 2    | 0 | 0 | -2 | ∞ | ∞ | ∞ | 0 | -1 | -1 | ∞ | ∞ | ∞ | ∞ | ∞ |
+```
 
 #### Iteration 3
+Paths and path lengths:
+```
+skhi: -2
+skgd: -1
+sabc: -5
+sabe: -5
+```
 
-| <p>paths and lengths:</p><p>skhi: -2</p><p>skgd: -1</p><p>sabc: -5</p><p>sabe: -5</p> |
-| ------------------------------------------------------------------------------------- |
-
-\
-\
-\
-
-
+```
 | iter | s | a | b  | c  | d  | e  | k | g  | h  | i  | j | m | n | f |
 | ---- | - | - | -- | -- | -- | -- | - | -- | -- | -- | - | - | - | - |
 | 3    | 0 | 0 | -2 | -5 | -2 | -5 | 0 | -1 | -1 | -2 | ∞ | ∞ | ∞ | ∞ |
-
-\
-\
-
+```
 
 #### Iteration 4
+Paths and path lengths:
 
 ```
-paths and lengths:
 skhim: -5
 skhij: -5
 skgde: -3
@@ -179,45 +175,39 @@ sabcd: -7
 sabef: -7
 ```
 
-\
-\
-
-
+```
 | iter | s | a | b  | c  | d  | e  | k | g  | h  | i  | j  | m  | n | f  |
 | ---- | - | - | -- | -- | -- | -- | - | -- | -- | -- | -- | -- | - | -- |
 | 4    | 0 | 0 | -2 | -5 | -7 | -8 | 0 | -1 | -1 | -2 | -5 | -5 | ∞ | -7 |
-
-\
-
+```
 
 #### Iteration 5
+Paths and path lengths:
+```
+skhimn: -12
+skhijn: -12
+skgdef: -5
+sabcde: -8
+sabef: -7: no change, reached finish in prior iteration
+```
 
-| <p>paths and lengths:</p><p>skhimn: -12</p><p>skhijn: -12</p><p>skgdef: -5</p><p>sabcde: -8</p><p>sabef: -7 // no change, reached finish in prior iteration </p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
-\
-\
-
-
+```
 | iter | s | a | b  | c  | d  | e  | k | g  | h  | i  | j  | m  | n   | f  |
 | ---- | - | - | -- | -- | -- | -- | - | -- | -- | -- | -- | -- | --- | -- |
 | 5    | 0 | 0 | -2 | -5 | -7 | -8 | 0 | -1 | -1 | -2 | -5 | -5 | -12 | -7 |
-
-\
-
+```
 
 #### Iteration 6
-
+Paths and path lengths:
 ```
-paths and path lengths:
 skhimnf: -15
-skhijnf: -10 // distance(f) not updated
-skgdef: -5 // no change, reached finish
+skhijnf: -10: distance(f) not updated
+skgdef:  -5: no change, reached finish
 sabcdef: -9
-sabef: -7 // no change, reached finish
+sabef: -7: no change, reached finish
 ```
 
-Thus, the algorithm finds five paths from start to finish. The path with the least value, `skhimnf`, is longest path, or the critical path.&#x20;
+Thus, the algorithm finds five paths from start to finish. The path with the greatest negative value, `skhimnf`, is the longest path, or the critical path.&#x20;
 
 ### Iterations summarized
 
@@ -263,8 +253,7 @@ function BellmanFord(list vertices, list edges, vertex source) is
     return distance, predecessor
 ```
 
-### Python implementation&#x20;
-
+### Python implementation
 A python implementation is available in [Programiz.com](https://www.programiz.com/dsa/bellman-ford-algorithm); it does not print the path. You can [try out this code on Replit](https://replit.com/@SouraBhattacha2/BellmanFordAlgo#main.py), with the following inputs:
 
 ```
