@@ -203,9 +203,9 @@ Paths and path lengths:
 ```
 skhimn: -12
 skhijn: -12
-skgdef: -5
-sabcde: -8
-sabef: -7: no change, reached finish in prior iteration
+skgdef:  -5
+sabcde:  -8
+sabef :  -7: no change, reached finish in prior iteration
 ```
 
 ```
@@ -220,10 +220,10 @@ Paths and path lengths:
 
 ```
 skhimnf: -15
-skhijnf: -10: distance(f) not updated
-skgdef:  -5: no change, reached finish
-sabcdef: -9
-sabef: -7: no change, reached finish
+skhijnf: -10
+skgdef :  -5: no change, reached finish
+sabcdef:  -9
+sabef  :  -7: no change, reached finish
 ```
 
 Thus, the algorithm finds five paths from start to finish. The path with the greatest negative value, `skhimnf`, is the longest path, or the critical path.
@@ -232,7 +232,7 @@ Thus, the algorithm finds five paths from start to finish. The path with the gre
 
 Here is the distance array through all the iterations.
 
-<table data-header-hidden data-full-width="true"><thead><tr><th width="86">iter</th><th width="60">s</th><th width="58">a</th><th width="57">b</th><th width="56">c</th><th width="58">d</th><th width="56">e</th><th width="56">k</th><th width="55">g</th><th width="56">h</th><th width="59">i</th><th width="59">j</th><th width="66">m</th><th width="62">n</th><th width="60">f</th></tr></thead><tbody><tr><td>iter</td><td>s</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>k</td><td>g</td><td>h</td><td>i</td><td>j</td><td>m</td><td>n</td><td>f</td></tr><tr><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>1</td><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>2</td><td>0</td><td>0</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>-1</td><td>-1</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>3</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-2</td><td>-5</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>4</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>∞</td><td>-7</td></tr><tr><td>5</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-7</td></tr><tr><td>6</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-15</td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th width="86">iter</th><th width="60">s</th><th width="58">a</th><th width="57">b</th><th width="56">c</th><th width="58">d</th><th width="56">e</th><th width="56">k</th><th width="55">g</th><th width="56">h</th><th width="59">i</th><th width="59">j</th><th width="66">m</th><th width="62">n</th><th width="60">f</th></tr></thead><tbody><tr><td>iter</td><td>s</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>k</td><td>g</td><td>h</td><td>i</td><td>j</td><td>m</td><td>n</td><td>f</td></tr><tr><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>1</td><td>0</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>2</td><td>0</td><td>0</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>0</td><td>-1</td><td>-1</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>3</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-2</td><td>-5</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr><tr><td>4</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>∞</td><td>-7</td></tr><tr><td>5</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-7</td></tr><tr><td>6</td><td>0</td><td>0</td><td>-2</td><td>-5</td><td>-7</td><td>-8</td><td>0</td><td>-1</td><td>-1</td><td>-2</td><td>-5</td><td>-5</td><td>-12</td><td>-15</td></tr></tbody></table>
 
 The algorithm terminates in iteration 6 because all paths have reached the finish point.
 
