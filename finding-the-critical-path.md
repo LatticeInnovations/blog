@@ -22,7 +22,7 @@ This post introduces basic terms used in graph theory, and works through an exam
 
 We start with a project that has tasks with durations and dependencies. There are multiple paths from start `s` to finish `f`. The longest path, or the critical path, is `{s,k,h,i,m,n,f}`, totalling 15 days.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Figure 1: task durations and connections</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (10).png" alt=""><figcaption><p>Figure 1: task durations and connections</p></figcaption></figure>
 
 Graph theory can be applied to analyze such a diagram—each task is treated as a _**vertex**_, and each dependency is an _**edge**_.
 
@@ -38,7 +38,7 @@ The Bellman-Ford algorithm searches for the shortest path in a graph. But the cr
 
 Before we find the longest path, we have to assign weights to edges. If we assign the duration of task `v` to the edge `{v,w}` that connects to the successor `w`, figure 1 transforms into figure 2.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Figure 2: Vertices and weighted edges</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Figure 2: Vertices and weighted edges</p></figcaption></figure>
 
 Task `a` is 2 days long, and is followed by task `b`. Thus, we set edge length `C(a,b)` equal to the duration of task `a`. We could also calculate `C(a,b)` by the difference in start dates:
 
@@ -55,7 +55,7 @@ This formula accommodates cases where a task finishes on the same day as its suc
 
 ### Example
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Figure 3: A sample gantt with four sequential tasks</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Figure 3: A sample gantt with four sequential tasks</p></figcaption></figure>
 
 In the example above, only path is the critical path. It is 1 + 4 + 1 = 6 days long, including weekends/ holidays.
 
@@ -135,7 +135,7 @@ sk: L(1,k) = 0
 sa: L(1,a) = 0
 ```
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Distance array:
 
