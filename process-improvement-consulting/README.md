@@ -6,20 +6,20 @@ description: Jan 2, 2015
 
 This section showcases Lattice's first process consulting assignment, completed four months after our inception. The client was gracious enough to allow us to make the content publicly available.
 
-It started with a question.&#x20;
+It started with a question posed by the medical superintendent of the hospital.&#x20;
 
-The medical superintendent of the hospital asked, "We are considering expanding our outpatient department's size to help alleviate patient load. Do you think we can do this expansion with a constrained budget?"
+He said, "We are considering expanding our outpatient department's size to help alleviate patient load. Do you think we can do this expansion with a constrained budget?"
 
 We went to the [_gemba_](#user-content-fn-1)[^1]_._ Using the Kaizen (Lean) methodology, we we were able to propose process changes that could increase peak OPD throughput by 25%, while limiting investment in new equipment to only $300.
 
 The recommendations are site-specific, but the principles are generalizable to hospitals even today—more than a decade later.&#x20;
 
-{% content-ref url="context.md" %}
-[context.md](context.md)
+{% content-ref url="context-and-objective.md" %}
+[context-and-objective.md](context-and-objective.md)
 {% endcontent-ref %}
 
-{% content-ref url="objective-and-observations.md" %}
-[objective-and-observations.md](objective-and-observations.md)
+{% content-ref url="observations.md" %}
+[observations.md](observations.md)
 {% endcontent-ref %}
 
 {% content-ref url="recommendations.md" %}

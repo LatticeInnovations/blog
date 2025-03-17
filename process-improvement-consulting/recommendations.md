@@ -34,10 +34,10 @@ The cycle time, or rate of operation of all other workstations, have to be set b
 
 Both registration and vitals workstations operate faster than the target cycle time of 60 seconds. Each registration counter is able to process a patient every 120 seconds, and with three registration counters operating in tandem, the cycle time is 40 seconds. The single workstation where vitals are measured operates at 58s per patient.
 
-Physician Flow Balancing
+Physician load leveling
 
 
-We recommend that fast-track patients be assigned a separate line – to speed them through the process. The following pattern of assignment is recommended so that flow is balanced across all physicians:
+Fast-track patients should be assigned to a separate line, to speed them through the process. The following pattern of assignment is recommended so that load—in terms of time—is leveled across all physicians:
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Figure 5: Physician allocation 3:1 between slow-track and fast-track</p></figcaption></figure>
 
@@ -45,7 +45,7 @@ We recommend that fast-track patients be assigned a separate line – to speed t
 
 By the second hour, sufficient patients have their lab tests with them to return for the second consultation (diagnosis/ prescription), at an average throughput of 12 patients/ hour. The hour-long lunch break may be halved for the physicians to step out for in pairs.
 
-With this configuration, the total OPD capacity is 456 patients/ day—25% higher than the current maximum of 400 patients/ day.
+With this configuration, the total OPD capacity is 456 patients/ day—25% higher than the current maximum of 400 patients/ day, and more t.
 
 Modify the OPD coordinator's role
 
@@ -65,7 +65,7 @@ To implement the flow-balancing for physicians, their role will have to change t
 4. Receive patient investigation reports from Lab/ X-Ray - so that patients do not have to wait outside the Lab/ X-Ray room
 5. Assign slow-track patients to doctors for their second consultation (diagnosis/ prescription) once their investigation results are available
 
-Such a workflow requires IT support. A single screen that enables the OPD coordinators to perform these tasks is shown in Annexure 2.
+Such a workflow requires IT support. A single screen that enables the OPD coordinators to perform these tasks is shown in [Annexure 2](annexures.md#annexure-2-opd-coordinator-screen).
 
 Reorganize Pharmacy Operations to Support 2 Tracks
 
@@ -84,8 +84,7 @@ The steps are:
 
 In order to streamline Pharmacy operations, date entry, billing, and dispensing should be organized as a single set of counters. This will provide the added benefit of increasing checks on billing within the process - between pharmacy and registration staff - and will improve ensure compliance with financial guidelines.
 
-\
-The 3 steps of Pharmacy operations serve patients at varying rates:
+The 3 steps of Pharmacy operations serve patients at varying rates:
 
 1. Data entry: 60s per patient per counter
 2. Billing: 90s per patient per counter
@@ -101,7 +100,9 @@ The target time for the fast track is 150s per patient, and that for the slow tr
 
 ## Streamline Laboratory Operations
 
-75% of all slow-track patients avail of laboratory services, which are composed of 6 types, as shown below. The table also has data about preparation time, testing time and total time (in seconds). When total time is multiplied by load (% of slow-track patients by test type), the results is the cycle time for each test type - the value in the last column. All values are in seconds.
+75% of all slow-track patients avail of laboratory services, which are composed of 6 types, as shown below. The table also has data about preparation time, testing time and total time. When total time is multiplied by load—the percentage of slow-track patients by test type—we arrive at the cycle time for each test type. This is stated in the last column.&#x20;
+
+All values are in seconds.
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Figure 8: Lab operations load and cycle time</p></figcaption></figure>
 
@@ -110,23 +111,25 @@ Once test results are available, the last step is data entry (reports). This tak
 
 ### Current Bottleneck - Biochemistry
 
-Slow-track target cycle time is 100s. Biochemistry does not meet this target. Also, since 3/4th of all Biochemistry tests are performed in tandem with one or more other test types, Lab technicians have to wait for Biochemistry reports to complete before they can hand out results.
+Slow-track target cycle time is 100s. Biochemistry does not meet this target. Also, since 75% of all Biochemistry tests are performed in tandem with one or more other test types, lab technicians have to wait for biochemistry reports to complete before they can hand out results.
 
 ### Solution - Centrifuges
 
-In order to reduce cycle time for Biochemistry in a cost-effective manner, preparation time should be addressed. The only preparation required for blood-based tests is centrifuging. Lab-grade centrifuges are currently priced within Rs. 20,000 each.\
-The lab has 2 centrifuges - one with a capacity of 8 samples and a set time of 5 minutes, and the other with a capacity of 16 samples and a set time of 10 minutes. The duration of centrifuging varies based on the number of test types a single sample of blood has to be split into - 5 minutes for single test-type, and 10 minutes for two or more test-types.\
-In order to simplify and standardize the centrifuging process, we recommend that 2 additional centrifuges, of capacity 16 samples with 10 minute set time, be procured. Each centrifuge should be run every 4 minutes - without waiting for a full batch of 16 samples. Even when run with 8 samples, this will reduce preparation time to 30 seconds, which in turn will reduce cycle time to 95s.\
-This process change will also eliminate the need to split samples based on the number of test types - reducing error and consequent re-work.
+In order to reduce cycle time for Biochemistry in a cost-effective manner, preparation time should be addressed. The only preparation required for blood-based tests is centrifuging. Lab-grade centrifuges are currently priced within Rs. 20,000 each.
 
+The lab has 2 centrifuges - one with a capacity of 8 samples and a set time of 5 minutes, and the other with a capacity of 16 samples and a set time of 10 minutes. The duration of centrifuging varies based on the number of test types a single sample of blood has to be split into - 5 minutes for single test-type, and 10 minutes for two or more test-types.
 
+In order to simplify and standardize the centrifuging process, we recommend that 2 additional centrifuges, of capacity 16 samples with 10 minute set time, be procured. Each centrifuge should be run every 4 minutes - without waiting for a full batch of 16 samples. Even when run with 8 samples, this will reduce preparation time to 30 seconds, which in turn will reduce cycle time to 95s.
+
+This process change will also eliminate the need to split samples based on the number of test types, reducing error and re-work.
 
 Streamline X-Ray Operations
 
 
-Since 25% of all slow-track patients avail of X-Ray facilities, the cycle time required at this workstation is 100s/ 25% = 400s. Currently, the X-Ray workstation serves one patient every 519s.\
-However, this observation was taken on a day with two X-Ray technicians, instead of three. If the third technician assists patients in changing their attire, then the time taken per patient can be reduced to imaging time - which ranged from 180s to 300s - well within the target cycle time.
+Since 25% of all slow-track patients avail of X-Ray facilities, the cycle time required at this workstation is 100s/ 25% = 400s. Currently, the X-Ray workstation serves one patient every 519s.
 
-\
+However, this observation was made on a day with two X-Ray technicians; three technicians are allocated to this workstation.&#x20;
 
+If the third person assists patients in changing their attire, then cycle time can be reduced to only imaging time—which ranged from 180s to 300s. This is well within the target of 400s.
 
+Assisting patients to change their attire is not a technical task. Thus, with three x-ray technicians, it is possible to give off-cover, attend to some IPD requirements, and still perform within the target cycle time.
