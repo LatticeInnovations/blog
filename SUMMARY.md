@@ -12,3 +12,4 @@
   * [Recommendations](process-improvement-consulting/recommendations.md)
   * [Conclusion](process-improvement-consulting/conclusion.md)
   * [Annexures](process-improvement-consulting/annexures.md)
+* [Back to website](https://thelattice.in)

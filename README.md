@@ -4,7 +4,7 @@ Welcome to the Lattice Innovations blog. We have organized our posts into three 
 
 To go back to our main website, [click here](https://thelattice.in).
 
-### Concept
+### Concepts
 
 Domain-specific ideas.
 
@@ -12,18 +12,16 @@ Domain-specific ideas.
 
 
 
-### Model
+### Models
 
-How to build something.
+Blueprints of how to bring a concept to life.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Authorization equals consent</td><td><a href=".gitbook/assets/philip-myrtorp-LAbOEEj-p3E-unsplash.jpg">philip-myrtorp-LAbOEEj-p3E-unsplash.jpg</a></td><td><a href="authorization-equals-consent.md">authorization-equals-consent.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Kaizen paradigm in practice: OPD process improvement</td><td><a href=".gitbook/assets/IMG_20141203_101442.jpg">IMG_20141203_101442.jpg</a></td><td><a href="process-improvement-consulting/">process-improvement-consulting</a></td></tr><tr><td>Authorization equals consent</td><td><a href=".gitbook/assets/philip-myrtorp-LAbOEEj-p3E-unsplash.jpg">philip-myrtorp-LAbOEEj-p3E-unsplash.jpg</a></td><td><a href="authorization-equals-consent.md">authorization-equals-consent.md</a></td></tr></tbody></table>
 
 
 
-### Function
+### Functional systems
 
-Implementing models.
+Enabling models to function, using software.
 
-{% content-ref url="finding-the-critical-path.md" %}
-[finding-the-critical-path.md](finding-the-critical-path.md)
-{% endcontent-ref %}
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Finding the critical path</td><td><a href=".gitbook/assets/sed-creatives-sardar-r-1EBbpJTFE-unsplash.jpg">sed-creatives-sardar-r-1EBbpJTFE-unsplash.jpg</a></td><td><a href="finding-the-critical-path.md">finding-the-critical-path.md</a></td></tr></tbody></table>
