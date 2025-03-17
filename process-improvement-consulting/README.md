@@ -10,7 +10,7 @@ It started with a question posed by the medical superintendent of the hospital.&
 
 He said, "We are considering expanding our outpatient department's size to help alleviate patient load. Do you think we can do this expansion with a constrained budget?"
 
-We went to the [_gemba_](#user-content-fn-1)[^1]_._ Using the Kaizen (Lean) methodology, we we were able to propose process changes that could increase peak OPD throughput by 25%, while limiting investment in new equipment to only $300.
+We went to the [_gemba_](#user-content-fn-1)[^1]_._ Using the Kaizen (Lean) methodology, we we were able to propose process changes that could increase peak OPD throughput by 25%, while limiting investment in new equipment to only $600.
 
 The recommendations are site-specific, but the principles are generalizable to hospitals even today—more than a decade later.&#x20;
 

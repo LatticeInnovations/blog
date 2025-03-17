@@ -111,15 +111,17 @@ Once test results are available, the last step is data entry (reports). This tak
 
 ### Current Bottleneck - Biochemistry
 
-Slow-track target cycle time is 100s. Biochemistry does not meet this target. Also, since 75% of all Biochemistry tests are performed in tandem with one or more other test types, lab technicians have to wait for biochemistry reports to complete before they can hand out results.
+Slow-track target cycle time is 100s. Biochemistry does not meet this target. Also, since 75% of all Biochemistry tests are performed in tandem with one or more other test types, lab technicians have to wait for biochemistry reports before they can hand out results.
 
 ### Solution - Centrifuges
 
 In order to reduce cycle time for Biochemistry in a cost-effective manner, preparation time should be addressed. The only preparation required for blood-based tests is centrifuging. Lab-grade centrifuges are currently priced within Rs. 20,000 each.
 
-The lab has 2 centrifuges - one with a capacity of 8 samples and a set time of 5 minutes, and the other with a capacity of 16 samples and a set time of 10 minutes. The duration of centrifuging varies based on the number of test types a single sample of blood has to be split into - 5 minutes for single test-type, and 10 minutes for two or more test-types.
+The lab has two centrifuges, one with a capacity of 8 samples and a set time of five minutes, and the other with a capacity of 16 samples and a set time of ten minutes. The duration of centrifuging varies based on the number of test types a single sample of blood has to be split into—five minutes for single test-type, and ten minutes for two or more test-types.
 
-In order to simplify and standardize the centrifuging process, we recommend that 2 additional centrifuges, of capacity 16 samples with 10 minute set time, be procured. Each centrifuge should be run every 4 minutes - without waiting for a full batch of 16 samples. Even when run with 8 samples, this will reduce preparation time to 30 seconds, which in turn will reduce cycle time to 95s.
+In order to simplify and standardize centrifuging , we recommend that 2 additional centrifuges, of capacity 16 samples with 10 minute set time, be procured. Each centrifuge should be run every 4 minutes—without waiting for a full batch of 16 samples. Local efficiency is not the goal; global efficiency is.
+
+Running four partially-loaded centrifuges will reduce preparation cycle time to 30 seconds, which in turn will reduce biochemistry cycle time to 95s.
 
 This process change will also eliminate the need to split samples based on the number of test types, reducing error and re-work.
 
