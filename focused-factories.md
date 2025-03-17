@@ -1,6 +1,6 @@
 ---
 description: Soura Bhattacharyya | Feb 18, 2015
-cover: .gitbook/assets/ansgar-scheffold-A-wumu2cs0o-unsplash.jpg
+cover: .gitbook/assets/petri-heiskanen-vqO_1fUCNxg-unsplash.jpg
 coverY: 0
 layout:
   cover:
