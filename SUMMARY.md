@@ -3,6 +3,8 @@
 * [Home](README.md)
   * [Population-scale health](readme/population-scale-health/README.md)
     * [Part I: Conceptual framework](readme/population-scale-health/part-i-conceptual-framework.md)
+    * [Part II: Model design](readme/population-scale-health/part-ii-model-design.md)
+    * [Part III: Enabling the model to function, using software](readme/population-scale-health/part-iii-enabling-the-model-to-function-using-software.md)
   * [Focused factories](focused-factories.md)
   * [Common sense](common-sense.md)
   * [Authorization equals consent](authorization-equals-consent.md)

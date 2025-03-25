@@ -45,9 +45,11 @@ Here, we propose four strata—at-risk, suspected, provisionally diagnosed, and 
 
 Across diseases and conditions, we **map four risk strata to five** **tiers of care — at-home, community, primary, secondary, and tertiary**. These tiers provide a structure to which both assessments and interventions are mapped, based on how capable the health system is.
 
-Consider a health system where homes have ready access to glucometers, BP monitors, and pregnancy test kits, but RT-PCR and sputum tests are limited to secondary care facilities. The assessments enabled by this system can be represented with the following capability map:
+Consider a health system where homes have ready access to glucometers, BP monitors, and pregnancy test kits, but RT-PCR and sputum tests are limited to secondary care facilities. The assessments, or diagnoses, enabled by this system can be represented by the following capability map:
 
-This map is a collection of nodes — each node represents the intersection of a tier of care, and a disease or condition. At each node, we use additional skills and tools — i.e. capabilities — if they are available. Using these capabilities, we update our risk model and risk strata. Similar maps can be developed for interventions.
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Figure 3: A diagnoses capability map</p></figcaption></figure>
+
+This map is a collection of nodes—each node represents the intersection of a tier of care, and a disease or condition. At each node, we use available skills and tools; collectively, capabilities. Using these capabilities, we update our risk model, and re-stratify the risk faced by the patient. Similar maps can be developed for interventions.
 
 A capability map evolves as processes mature, technologies develop, and care providers acquire new skills. Accurate, inexpensive rapid-antigen tests are moving definitive diagnosis of COVID-19 from labs to homes, similar to how self-use test strips moved pregnancy detection from labs to homes. In the domain of interventions, community-based vitals monitoring & drug dispensing are replacing a large portion of facility-based management of hypertension and diabetes.
 

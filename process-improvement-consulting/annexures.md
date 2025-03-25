@@ -5,7 +5,7 @@ Annexure 1: Overlaps across lab and radiology services
 
 Of 1,123 ODP visits analyzed, 465 visits, or 41%, availed of Lab investigations. 250 visits did no avail of any other investigations, 136 also had a USG exam, 70 also have an X-Ray, and 9 visits required all three - Lab, X-Ray and USG. This is illustrated in the Venn digram below.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Venn-diagram of overlap across the 3 investigation services—Lab, X-Ray, and USG.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Venn-diagram of overlap across the 3 investigation services—Lab, X-Ray, and USG.</p></figcaption></figure>
 
 The union of all three circles totals to 603—the number of visits where at least one investigative service was required. By definition, this equals the number of slow-track visits. The balance 520 were fast-track visits.
 

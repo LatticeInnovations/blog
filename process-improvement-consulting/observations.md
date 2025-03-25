@@ -22,7 +22,7 @@
 
 An analysis of Electronic Records for December 4 shows the following:
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Figure 2: Average throughput times across the day on Dec 4, split by fast and slow tracks</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Figure 2: Average throughput times across the day on Dec 4, split by fast and slow tracks</p></figcaption></figure>
 
 As evident above, average throughput times are particularly high in early hours. The registration desk opens at 8 am, and doctors report to the OPD at 9 am. Thus, patients arriving at or before 8 am wait for at least an hour.
 
