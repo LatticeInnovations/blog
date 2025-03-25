@@ -1,19 +1,6 @@
 # Part I: Conceptual framework
 
-
-
-```mermaid
-flowchart TD
-   A("Progressive 
-   risk assessment") --> B("Risk 
-   stratification")
-   B --> C("Capability 
-   mapping")
-   C --> D("Group-based 
-   intervention") 
-```
-
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Figure 1: Idea in brief</p></figcaption></figure>
 
 Progressive risk assessment
 
