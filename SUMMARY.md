@@ -10,6 +10,7 @@
   * [Authorization equals consent](authorization-equals-consent.md)
   * [Offline-first peer-to-peer payment](offline-first-peer-to-peer-payment.md)
   * [Finding the critical path](finding-the-critical-path.md)
+  * [API security](readme/api-security.md)
 * [Process improvement consulting](process-improvement-consulting/README.md)
   * [Context and Objective](process-improvement-consulting/context-and-objective.md)
   * [Observations](process-improvement-consulting/observations.md)
