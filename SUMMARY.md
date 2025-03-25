@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Home](README.md)
+  * [Population-scale health](readme/population-scale-health/README.md)
+    * [Part I: Conceptual framework](readme/population-scale-health/part-i-conceptual-framework.md)
   * [Focused factories](focused-factories.md)
   * [Common sense](common-sense.md)
   * [Authorization equals consent](authorization-equals-consent.md)
