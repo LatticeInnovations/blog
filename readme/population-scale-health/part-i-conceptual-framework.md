@@ -16,6 +16,13 @@ flowchart LR
    intervention") 
 ```
 
+
+
+```mermaid
+flowchart LR
+    A("progress") --> B("Risk strat")
+```
+
 ### Source of evidence
 
 * Patient (i.e. self-reported)
