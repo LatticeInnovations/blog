@@ -1,5 +1,7 @@
 ---
 description: December 19, 2022
+cover: ../../.gitbook/assets/joseph-chan-I23WeOTsA8M-unsplash.jpg
+coverY: 0
 ---
 
 # Population-scale health
@@ -11,3 +13,5 @@ It forms the basis of [Agni by Lattice](https://agni.thelattice.in), a mobile-fi
 {% content-ref url="part-i-conceptual-framework.md" %}
 [part-i-conceptual-framework.md](part-i-conceptual-framework.md)
 {% endcontent-ref %}
+
+Cover photo credit: Photo by [Joseph Chan](https://unsplash.com/@yulokchan?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/aerial-photography-of-four-cars-surrounded-with-people-I23WeOTsA8M?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)
