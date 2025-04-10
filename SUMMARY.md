@@ -7,6 +7,7 @@
     * [Part III: Enabling the model to function, using software](readme/population-scale-health/part-iii-enabling-the-model-to-function-using-software.md)
   * [Focused factories](focused-factories.md)
   * [Common sense](common-sense.md)
+  * [Consent in Digital Health](readme/consent-in-digital-health.md)
   * [Authorization equals consent](authorization-equals-consent.md)
   * [Offline-first peer-to-peer payment](offline-first-peer-to-peer-payment.md)
   * [Finding the critical path](finding-the-critical-path.md)
