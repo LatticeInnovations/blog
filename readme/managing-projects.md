@@ -1,14 +1,14 @@
-# Managing project
-
-## **Managing projects**
+# Managing projects
 
 Have you faced a situation where a project appeared to be in control for the first two-thirds, and then spiraled out of control close to the finish line? This has happened to us more times than we would like to remember.&#x20;
 
-Our response has been to develop work practices that prevent some of these situations from occurring, through better planning and error prevention.
+Our response has been to develop work practices that prevent some of these situations, and mitigate others.
 
 ## Definitions first
 
-Who is a manager? Someone who plans, and addresses deviations from the plan. Without plans, deviations cannot exist. As deviations decrease, so does the need for managers.
+Who is a manager? Someone who plans, and addresses deviations from the plan.&#x20;
+
+Without plans, deviations cannot exist. As planning time decreases, and deviations decrease, so does managerial time. This was an important motivation for us—in our team, managers of one project are often workers on other projects. Thus, the less we have to manage, [the more we can work](#user-content-fn-1)[^1].
 
 What is a project? A set of interconnected tasks that, once complete, achieves a goal.
 
@@ -20,7 +20,7 @@ Our project planning process is divided into four steps.
 
 1. List and categorize all the tasks that must be completed to reach the goal.
 2. Sequence tasks in the order in which they must be performed.
-3. Allocate tasks and estimate their duration, based on the resource[^1] who will perform them.
+3. Allocate tasks and estimate their duration, based on the resource[^2] who will perform them.
 4. Schedule based on the resource’s availability and capacity.
 
 **When all four steps are complete, a project plan can be visualized as a Gantt chart.**
@@ -33,11 +33,11 @@ Error prevention also starts here. As we made more project plans, we built a mas
 
 ### Categorize
 
-A task is categorized by the workstation that performs it, and the component[^2] that it belongs to.
+A task is categorized by the workstation that performs it, and the component[^3] that it belongs to.
 
 A component is a portion of the project that can be developed independently. For instance, a mobile app for primary healthcare may have the following components—user registration and login, screening, consultations and prescriptions.
 
-Design and development of such an app involves six workstations—scoping, system specifications, user interface design, backend coding, frontend coding, and final inspection[^3].
+Design and development of such an app involves six workstations—scoping, system specifications, user interface design, backend coding, frontend coding, and final inspection[^4].
 
 Tasks are thus labeled with both their workstation, and the component. And work flows from one workstation to another, for each component, until all components are complete, and ready for final assembly into a single app.
 
@@ -55,7 +55,7 @@ To deskill task sequencing, we create templates that provide workflow-based depe
 
 ### Allocate tasks, estimate duration
 
-When tasks are performed manually[^4], task duration is intimately tied to allocation. The more capable a contributor, the lower the duration.
+When tasks are performed manually[^5], task duration is intimately tied to allocation. The more capable a contributor, the lower the duration.
 
 Tasks are sufficiently granular so that they can be allocated to one individual. This brings in accountability. Two people cannot chop vegetables using the same knife.
 
@@ -106,11 +106,11 @@ The project planning process itself suggests the following sources of deviations
    3. an erroneous estimate of contributor’s capability
    4. delays in starting or doing the work
 
-Only the last source of deviation is person-dependent; all others are process-related. Hence, managers are best served by improving processes. As process-related errors are eliminated, person-dependent errors shrink rapidly. A workplace that eliminates waste from its processes, provides an environment that encourages its workers to improve their performance. A waste-free environment encourages waste-free habits[^5].
+Only the last source of deviation is person-dependent; all others are process-related. Hence, managers are best served by improving processes. As process-related errors are eliminated, person-dependent errors shrink rapidly. A workplace that eliminates waste from its processes, provides an environment that encourages its workers to improve their performance. A waste-free environment encourages waste-free habits[^6].
 
 The surest way to reduce process-related errors is through the use of work standards, which is a key weapon in Kaizen’s armory.
 
-Once we implement work standards, our PDCA loop transforms into an SDCA loop. Each time we work on a project, we standardize[^6] what we learn by updating our work standards. We must be aggressive in culling down work standards to only those that are necessary, else we run the risk of creating bureaucratic overhead. If a new work standard is not updated in 6 months from its date of creation, it should be consigned to the rubbish heap. No one is using it.
+Once we implement work standards, our PDCA loop transforms into an SDCA loop. Each time we work on a project, we standardize[^7] what we learn by updating our work standards. We must be aggressive in culling down work standards to only those that are necessary, else we run the risk of creating bureaucratic overhead. If a new work standard is not updated in 6 months from its date of creation, it should be consigned to the rubbish heap. No one is using it.
 
 Work standards provide a mechanism by which the lessons learnt by one project team can be shared with many. Learning from our own errors is experience. Learning from others’ errors is wisdom.
 
@@ -118,14 +118,16 @@ Work standards provide a mechanism by which the lessons learnt by one project te
 
 In the next post, "Finding the critical path", we dive into how to identify the critical path in a project—a essential aspect of of scheduling tasks, and a diagnostic tool for analyzing deviations.
 
-[^1]: There are 3 types of resources — supplies, equipment and people. For most services businesses, like Lattice, resources equal people.
+[^1]: However, in organizations where "managing" is seen as the only work for some people,  this motivation may not exist.
 
-[^2]: **At Lattice, we prefer to use “module” while referring to products and solutions, and “component” while referring to the process of assembling them. Modular products are enabled by componentized design and development. In casual conversation, though, I use these two terms interchangeably.**
+[^2]: There are 3 types of resources — supplies, equipment and people. For most services businesses, like Lattice, resources equal people.
 
-[^3]: We have a final inspection workstation today. We have to work towards eliminating it.
+[^3]: **At Lattice, we prefer to use “module” while referring to products and solutions, and “component” while referring to the process of assembling them. Modular products are enabled by componentized design and development. In casual conversation, though, I use these two terms interchangeably.**
 
-[^4]: **Merely using a tool does not make a task automated. Software development is manual — a contributor’s capability determines the rate of work.**
+[^4]: We have a final inspection workstation today. We have to work towards eliminating it.
 
-[^5]: **Just like a litter-free environment encourages us to throw trash in the trash can. Environments have a profound influence on our behavior — this has to be understood by managers and leaders to create any organizational change.**
+[^5]: **Merely using a tool does not make a task automated. Software development is manual — a contributor’s capability determines the rate of work.**
 
-[^6]: **The term “standardize” is often misunderstood. It brings to mind monotonous, repetitive work. But doing the same thing is not standardization. Rather, to standardize is to transform fluctuating inputs into consistent output.**
+[^6]: **Just like a litter-free environment encourages us to throw trash in the trash can. Environments have a profound influence on our behavior — this has to be understood by managers and leaders to create any organizational change.**
+
+[^7]: **The term “standardize” is often misunderstood. It brings to mind monotonous, repetitive work. But doing the same thing is not standardization. Rather, to standardize is to transform fluctuating inputs into consistent output.**
