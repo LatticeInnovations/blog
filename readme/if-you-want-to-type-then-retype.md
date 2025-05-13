@@ -22,19 +22,19 @@ layout:
 
 It is ironic that I am publishing this post on a site hosted via GitBook. Because it is about their direct competitor, [Retype](https://retype.com/).
 
-I spent several weeks exploring different tools for publishing static sites. My criteria were as follows:
+I have used GitBook to set up my [personal blog](https://soura.org), this site, and a product website ([neoport.org](https://www.neoport.org/)). The free plan works great for a single-contributor site, but paid tiers for collaboration were beyond my budget. Or beyond my faux middle-class sensibilities.
+
+So, when faced with the prospect of publishing a large project, I spent several weeks exploring alternatives for publishing static sites. My criteria were—in no particular order:
 
 1. Inexpensive
 2. Easy for me to understand and operate, i.e. designed primarily for a writer, not a coder
 3. Easy to manage content via GitHub, where all of our documentation sits
 
-I had already used GitBook to set up my personal blog and a product website ([www.neoport.org](https://www.neoport.org/)). The free plan worked great for a site updated by a single contributor, but the paid tiers that enabled collaboration were expensive.
-
-Chanced across Retype thanks to a Reddit post. Used it for our open-source platform, [Agni](https://agni.thelattice.in). Loved it. Here is why.
+I chanced across Retype thanks to a Reddit post. Used it for our open-source platform, [Agni](https://agni.thelattice.in). Loved it. Here is why.
 
 ### Git all the way—with you in control&#x20;
 
-Retype takes markdown content as-is, and builds a `.retype` html directory within your repository. It then creates a separate branch that is published. You have full control over content at all times.
+Retype takes markdown content as-is, and builds a `.retype` html directory within your repository. It then creates a separate branch, which you publish via GitHub pages. You have full control over content at all times.
 
 If you already follow pull-request discipline, then garnering contributions from the entire team is simple. And if you use a paid plan, then save the license as a repo secrect. No need to share passwords.
 
@@ -56,11 +56,14 @@ The local build feature is so useful that I am considering adding Retype to inte
 
 Some of these configurations are paid. All of these configurations are examples of design done right:
 
-* You can set different dark and light logos for your site. Check out [Agni](https://agni.thelattice.in); pay attention to the top-left icon as you switch between dark and light mode.
-* You can set different heading depths on the right-side navbar. The default (available with the free plan) is H2 to H4.
-* Octicons available as a default library to spruce up buttons and side navigation.
-* Granular control over side nav—sequence of items, grouping. open/ closed state, visibility (on paid plans).
+* Set different dark and light logos for your site. On the [Agni](https://agni.thelattice.in) site, check out the top-left icon as you switch between dark and light mode.
+* Set different heading depths on the right-side navbar. The default (available with the free plan) is H2 to H4.
+* Beuatify code snippets, add line-level highlights and line numbers.
+* Octicons are available as a default library to spruce up buttons and side navigation.
+* Granular control over side nav—sequence of items, grouping. open/ closed state.
 * Simple extensions to standard markdown syntax, to provide features like accordions and tabs.
+
+
 
 So, if you type, try [Retype](https://retype.com/).
 
