@@ -9,7 +9,6 @@
   * [Common sense](common-sense.md)
   * [Consent in Digital Health](readme/consent-in-digital-health.md)
   * [Authorization equals consent](authorization-equals-consent.md)
-  * [Offline-first peer-to-peer payment](offline-first-peer-to-peer-payment.md)
   * [Quality control](readme/quality-control.md)
   * [Managing projects](readme/managing-projects.md)
   * [Finding the critical path](finding-the-critical-path.md)
