@@ -22,4 +22,4 @@ It forms the basis of [Agni by Lattice](https://agni.thelattice.in), a mobile-fi
 [part-iii-enabling-the-model-to-function-using-software.md](part-iii-enabling-the-model-to-function-using-software.md)
 {% endcontent-ref %}
 
-Cover photo credit: [Joseph Chan](https://unsplash.com/@yulokchan?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/aerial-photography-of-four-cars-surrounded-with-people-I23WeOTsA8M?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)
+_Photo credit:_ [_Joseph Chan_](https://unsplash.com/@yulokchan?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) _on_ [_Unsplash_](https://unsplash.com/photos/aerial-photography-of-four-cars-surrounded-with-people-I23WeOTsA8M?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)

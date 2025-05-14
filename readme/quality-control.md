@@ -105,7 +105,7 @@ The quality system is also integrated with Lattice’s performance measurement s
 
 
 
-_Cover credit:_ [_Tolga Ulkan_](https://unsplash.com/@tolga__?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) _on_ [_Unsplash_](https://unsplash.com/photos/yellow-and-brown-leaves-on-white-ceramic-tiles-9k36QqhA0cU?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)
+_Photo credit:_ [_Tolga Ulkan_](https://unsplash.com/@tolga__?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) _on_ [_Unsplash_](https://unsplash.com/photos/yellow-and-brown-leaves-on-white-ceramic-tiles-9k36QqhA0cU?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)
 
 [^1]: A repository (repo) can be thought of as an access-controlled online folder that has an extensive change management system. Repos can contain code, images, videos, or documents — anything digital.
 

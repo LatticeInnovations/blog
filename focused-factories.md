@@ -70,3 +70,7 @@ Aravind Eye Hospitals is the prefect example of a focused factory. Its founder, 
 The paradigm of intuitive, empirical and precision medicine, and the balloon angioplasty example, is from Clay Christensen’s work on disruptive innovation in healthcare, captured in his book, The Innovator’s Prescription. The section on “ideal” disease is my original contribution.
 
 Insights about Aravind's model are from an HBS case study: "The Aravind Eye Hospital, Madurai, India: In Service for Sight", V. Kasturi Rangan, Harvard Business School case study: April 1993 (Revised May 2009)
+
+
+
+_Photo credit:_ [_Petri Heiskanen_](https://unsplash.com/@pheiskan?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) _on_ [_Unsplash_](https://unsplash.com/photos/low-angle-photography-of-building-interior-vqO_1fUCNxg?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)

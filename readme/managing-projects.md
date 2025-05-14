@@ -116,7 +116,11 @@ Work standards provide a mechanism by which the lessons learnt by one project te
 
 ## Further reading
 
-In the next post, "Finding the critical path", we dive into how to identify the critical path in a project—a essential aspect of of scheduling tasks, and a diagnostic tool for analyzing deviations.
+In the next post, "[Finding the critical path](../finding-the-critical-path.md)", we dive into how to identify the critical path in a project—a essential aspect of of scheduling tasks, and a diagnostic tool for analyzing deviations.
+
+
+
+_Photo credit:_ [_Simon Gibson_](https://unsplash.com/@onedharma?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) _on_ [_Unsplash_](https://unsplash.com/photos/red-metal-frame-under-white-sky-during-daytime-FT362qyhd58?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)
 
 [^1]: However, in organizations where "managing" is seen as the only work for some people,  this motivation may not exist.
 

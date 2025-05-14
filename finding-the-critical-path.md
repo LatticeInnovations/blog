@@ -1,5 +1,21 @@
 ---
 description: Soura Bhattacharyya | April 10, 2023
+cover: .gitbook/assets/sed-creatives-sardar-r-1EBbpJTFE-unsplash.jpg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Finding the critical path
@@ -304,3 +320,7 @@ I use a free Replit account, so no guarantees that the workspace will always be 
 
 * [Algorithms: Design and Analysis, Part 2 | edX](https://learning.edx.org/course/course-v1:StanfordOnline+SOE-YCSALGORITHMS2+1T2020/home) > The Bellman-Ford Algorithm: This is a Stanford undergraduate course, available for free on edX.
 * [Algorithms, Part II | Coursera](https://in.coursera.org/learn/algorithms-part2#syllabus) > Shortest Paths: This is a Princeton undergraduate course, available for free on Coursera. It includes guidance for java implementation.
+
+
+
+_Photo credit:_ [_Sed "Creatives" Sardar_](https://unsplash.com/@sedcreatives?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) _on_ [_Unsplash_](https://unsplash.com/photos/a-sign-on-the-street-r-1EBbpJTFE?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)

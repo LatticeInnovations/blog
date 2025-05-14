@@ -36,13 +36,13 @@ I chanced across Retype thanks to a Reddit post. Used it for our open-source pla
 
 Retype takes markdown content as-is, and builds a `.retype` html directory within your repository. It then creates a separate branch, which you publish via GitHub pages. You have full control over content at all times.
 
-If you already follow pull-request discipline, then garnering contributions from the entire team is simple. And if you use a paid plan, then save the license as a repo secrect. No need to share passwords.
+If you already follow pull-request discipline, then garnering contributions from the entire team is simple. If you use a paid plan, then you save the license key as a repo secrect. No need to share passwords.
 
 ### Build and run locally
 
 This is a huge bonus over GitBook. Retype can be built and run locally—a great way to review changes before publishing them, especially during major overhauls. Once changes are merged to the `main` branch, GitHub actions rebuilds and publishes the website.
 
-The local build feature is so useful that I am considering adding Retype to internal projects, just to have a better way to read through docs. &#x20;
+The local build feature is so useful that I we are adding Retype to a [complex internal project](https://www.thelattice.in/projects/ai-platform), just to have a better way to read through docs. &#x20;
 
 ### Generous free-tier and pocket-friendly pricing
 
@@ -56,14 +56,13 @@ The local build feature is so useful that I am considering adding Retype to inte
 
 Some of these configurations are paid. All of these configurations are examples of design done right:
 
-* Set different dark and light logos for your site. On the [Agni](https://agni.thelattice.in) site, check out the top-left icon as you switch between dark and light mode.
-* Set different heading depths on the right-side navbar. The default (available with the free plan) is H2 to H4.
-* Beuatify code snippets, add line-level highlights and line numbers.
-* Octicons are available as a default library to spruce up buttons and side navigation.
-* Granular control over side nav—sequence of items, grouping. open/ closed state.
-* Simple extensions to standard markdown syntax, to provide features like accordions and tabs.
-
-
+* Switch between different logos for dark versus light mode. On the [Agni](https://agni.thelattice.in) site, check out the top-left icon as you switch between dark and light mode.
+* Vary heading depths on the right-side navbar. The free plan is limited to the default of H2 to H4.
+* Specify language to beautify code snippets, show or hide line numberes, and add line-level highlights.
+* Use Octicons to spruce up buttons and side navigation.
+* Exercise granular control over the left side nav—sequence of items, grouping, open/ closed state.
+* Use markdown-like syntax to pull in UI elements like accordions and tabs.
+* If you need cards—something that GitBook provides by default—then create a one-time, customized CSS container.
 
 So, if you type, try [Retype](https://retype.com/).
 

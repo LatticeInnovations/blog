@@ -74,6 +74,6 @@ Remove the `x-powered-by` and `server` headers from your HTTP response. Potentia
 
 
 
-Photo credit: [Arthur Mazi](https://unsplash.com/@arthurbizkit?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/blue-sky-over-white-clouds-a8CxRWIu8yw?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)
+_This blog first appeared on_ [_Medium_](https://medium.com/lattice-what-is/most-commonly-known-api-vulnerabilities-6f3d69dde671)_, with the title "Most Commonly Known API Vulnerabilities And API Security Best Practices"._&#x20;
 
-This blog first appeared on [Medium](https://medium.com/lattice-what-is/most-commonly-known-api-vulnerabilities-6f3d69dde671), with the title "Most Commonly Known API Vulnerabilities And API Security Best Practices".&#x20;
+_Photo credit:_ [_Arthur Mazi_](https://unsplash.com/@arthurbizkit?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash) _on_ [_Unsplash_](https://unsplash.com/photos/blue-sky-over-white-clouds-a8CxRWIu8yw?utm_content=creditCopyText\&utm_medium=referral\&utm_source=unsplash)
