@@ -2,7 +2,11 @@
 description: Sahil Mehta | September 14, 2014
 ---
 
-# The Jugaadathon Playbook
+# The Jugaadathon playbook
+
+> From 2014 to 2016, we organized medtech hackathons that helped build a community of over 2,000 technologists, clinicial practitioners, designers, and entrepreneurs. This work was done in partnership with the Consortium for Affordable Medical Technologies, or CAMTech, which was housed in the MGH Center for Global Health.\
+> \
+> We called this initiative, `Jugaad-a-thon`. This post summarizes our learnings about how the design and execution of such an initiative.&#x20;
 
 ## What is the goal of a jugaad-a-thon?
 

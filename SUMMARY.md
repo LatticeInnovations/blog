@@ -12,7 +12,7 @@
   * [Quality control](readme/quality-control.md)
   * [Managing projects](readme/managing-projects.md)
   * [Finding the critical path](finding-the-critical-path.md)
-  * [The Jugaadathon Playbook](readme/the-jugaadathon-playbook.md)
+  * [The Jugaadathon playbook](readme/the-jugaadathon-playbook.md)
   * [If you want to type, then retype](readme/if-you-want-to-type-then-retype.md)
   * [API security](readme/api-security.md)
 * [Process improvement consulting](process-improvement-consulting/README.md)
