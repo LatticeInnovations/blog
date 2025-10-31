@@ -2,20 +2,6 @@
 description: October 14, 2022 | Anoop K Singh
 cover: ../.gitbook/assets/arthur-mazi-a8CxRWIu8yw-unsplash.jpg
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # API security

@@ -2,20 +2,6 @@
 description: Soura Bhattacharyya | Feb 18, 2015
 cover: .gitbook/assets/petri-heiskanen-vqO_1fUCNxg-unsplash.jpg
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Focused factories

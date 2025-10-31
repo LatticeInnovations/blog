@@ -15,6 +15,7 @@
   * [The Jugaadathon playbook](readme/the-jugaadathon-playbook.md)
   * [If you want to type, then retype](readme/if-you-want-to-type-then-retype.md)
   * [API security](readme/api-security.md)
+  * [Universal record identifier](readme/universal-record-identifier.md)
 * [Process improvement consulting](process-improvement-consulting/README.md)
   * [Context and Objective](process-improvement-consulting/context-and-objective.md)
   * [Observations](process-improvement-consulting/observations.md)

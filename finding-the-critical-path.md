@@ -2,20 +2,6 @@
 description: Soura Bhattacharyya | April 10, 2023
 cover: .gitbook/assets/sed-creatives-sardar-r-1EBbpJTFE-unsplash.jpg
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Finding the critical path

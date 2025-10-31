@@ -2,20 +2,6 @@
 description: Soura Bhattacharyya | May 13, 2025
 cover: ../.gitbook/assets/arun-sharma-rTAdnqmYS40-unsplash.jpg
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # If you want to type, then retype
